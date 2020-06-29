@@ -39,7 +39,7 @@ fig, (ax1, ax2) = plt.subplots(1,2, figsize=(10,4), sharey=True, dpi=120)
 
 # Plot
 ax1.plot([1,2,3,4,5], [1,2,3,4,10], 'go')  # greendots
-ax2.plot([1,2,3,4,5], [2,3,4,5,11], 'b*')  # bluestart
+ax2.plot([1,2,3,4,5], [2,3,4,5,11], 'b*')  # bluestars
 
 # Title, X and Y labels, X and Y Lim
 ax1.set_title('Scatterplot Greendots'); ax2.set_title('Scatterplot Bluestars')
@@ -120,7 +120,6 @@ plt.title('Sine and Cosine Waves\n(Notice the ticks are on all 4 sides pointing 
 
 
 ## How to customize the legend
-# plt.style.use('seaborn-notebook')
 plt.figure(figsize=(10,7), dpi=80)
 X = np.linspace(0, 2*np.pi, 1000)
 sine = plt.plot(X,np.sin(X)); cosine = plt.plot(X,np.cos(X))
@@ -210,8 +209,7 @@ mpl.rcParams.update(mpl.rcParamsDefault)  # reset to defaults
 
 ## Difference between scatter plot from plt.plot and plt.scatter
 # Scatterplot with varying size and color of points
-import pandas as pd
-midwest = pd.read_csv("https://raw.githubusercontent.com/selva86/datasets/master/midwest_filter.csv")
+midwest = pd.read_csv('data/midwest_filter.csv')#"https://raw.githubusercontent.com/selva86/datasets/master/midwest_filter.csv")
 
 # Plot
 fig = plt.figure(figsize=(14, 7), dpi= 80, facecolor='w', edgecolor='k')
